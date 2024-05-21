@@ -20,7 +20,7 @@ function out=calculate_para(total_field, par_diameter)
     n_Fe = 25/56*1e3;      %溶液铁浓度，25 mg/mL
     c = n_Fe/N_Fe;      %溶液中四氧化三铁浓度
     %% 粒子磁化
-    out = c*momet*step_cur(Beta*H/u0, u0, MS);      % 可选择不同粒子响应模型
+    out = c*momet*langevin(Beta*H/u0);      % 可选择不同粒子响应模型
     out = -u0*S*VT*out;      % 输出
     % 郎之万模型
     function out = langevin(xi)

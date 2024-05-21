@@ -75,7 +75,7 @@ S_n&=\frac{1}{T}\{\int_{-A}^{A}M'(H_S-H_D)e^{in arccos(H_D/A)}dH_D + \int_{A}^{-
 &=\frac{2i}{T}\{\int_{-A}^{A}M'(H_S-H_D)sin(n arccos(H_D/A))dH_D \} \qquad \qquad (12)
 \end{aligned}
 $$
-这里sin（narccos）可以用切比雪夫多项式近似:
+这里sin（n*arccos）可以用切比雪夫多项式近似:
 $$
 U_n(x)=\frac{sin((n+1)arccosx)}{sin(arccosx)} \qquad \qquad (13)
 $$

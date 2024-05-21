@@ -8,7 +8,7 @@ sample_rate = 1e7;      % 采样率
 H_G = 2.5;     % 选择场梯度  T/m
 particle_diameters = 25e-9;     % 粒径 此处单位为 nm
 Excited_Amplitute = 50e-3;      % 激励场幅值       
-Excited_Fre = 25e3;     % 激励场频率
+Excited_Fre = 24e3;     % 激励场频率
 t_pe = 1/Excited_Fre;
 % t = 0:t_sam:5*1/(25e3);  % 3 Period
 t = -t_pe*1.5:1/sample_rate:t_pe*1.5;
@@ -34,7 +34,7 @@ end
 % 此处生成的 out_fre_Amplitude_matric 其实就是系统矩阵
 
 % %% plot
-curAmp = out_fre_Amplitude_matric((find(ismember(f/25e3, (1:9)))),:);
+curAmp = out_fre_Amplitude_matric((find(ismember(f/Excited_Fre, (1:9)))),:);
 figure(1)
 for i = 1:9
     subplot(3,3,i)
